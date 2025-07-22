@@ -19,16 +19,16 @@
     <!-- Font awesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="icon" href="../images/veldAI-logo.png">
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/interactions.css">
-    <link rel="stylesheet" href="../css/label.css">
+    <link rel="icon" href="{{ url_for('static', filename='images/veldAI-logo.png')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/interactions.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/label.css')}}">
 </head>
 <body>
     <section class="section user-interface">
         <aside class="aside-content">
             <div class="inside-ct">
-                <a class="logo-link" href="#"><h1 class="logo">VeldAI</h1><img class="logo-image" src="../images/veldAI-logo.png" alt="Logo image"></a>
+                <a class="logo-link" href="#"><h1 class="logo">VeldAI</h1><img class="logo-image" src="{{ url_for('static', filename='images/veldAI-logo.png')}}" alt="Logo image"></a>
                 <div class="search-container">
                     <input class="search-bar" type="text" placeholder="Search">
                     <button class="search-btn"><i class="fa-solid fa-arrow-right"></i></button>
@@ -62,7 +62,7 @@
                     <div class="overlay"></div>
                     <h4 class="little-section-title">Continue Labelling</h4>
                     <p class="little-section-text">Jump back in and keep labelling your data.</p>
-                    <a class="open-button" href="./workspace.html">Open Workspace</a>
+                    <a class="open-button" href="{{ url_for('workspace')}}">Open Workspace</a>
                 </div>
                 <div class="right-main-section">
                     <div class="right-top-section">
@@ -113,6 +113,5 @@
             </div>
         </div>
     </section>
-    
 </body>
 </html>

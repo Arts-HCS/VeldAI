@@ -19,18 +19,18 @@
     <!-- Font awesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="icon" href="../images/veldAI-logo.png">
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/interactions.css">
+    <link rel="icon" href="{{ url_for('static', filename='images/veldAI-logo.png')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/interactions.css')}}">
 
-    <script defer src="../js/script.js"></script>
+    <script defer src="{{ url_for('static', filename='js/script.js')}}"></script>
 
 </head>
 <body>
     <header class="header">
         <nav class="navbar">
-            <a class="logo-link" href="#"><h1 class="logo">VeldAI</h1><img class="logo-image" src="../images/veldAI-logo.png" alt="Logo image"></a>
+            <a class="logo-link" href="#"><h1 class="logo">VeldAI</h1><img class="logo-image" src="{{ url_for('static', filename='images/veldAI-logo.png')}}" alt="Logo image"></a>
             <ul class="nav site-links">
                 <li><a class="s-link" href="#">Home</a></li>
                 <li><a class="s-link" href="#">Clients</a></li>

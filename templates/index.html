@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the main branch of the proyect.">
+    <title>Proyect tree</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+
+    <link rel="icon" href="{{ url_for('static', filename='images/veldAI-logo.png')}}">
+
+</head>
+<body>
+    <section class="section main-section">
+        <a class="logo-link" href="#"><h1 class="logo">VeldAI</h1><img class="logo-image" src="{{ url_for('static', filename='images/veldAI-logo.png')}}" alt="Logo image"></a>
+        <div class="section-content">
+            <h1 class="main-title">Main Page</h1>
+            <p class="main-text">Get into the website by clicking the preferred link</p>
+            <ul class="root-links">
+                <li><a class="b-link" href="{{ url_for('landing')}}">Landing page</a></li>
+                <li><a class="b-link" href="{{ url_for('labelview1')}}">Labeler interface</a></li>
+                <li><a class="b-link" href="{{ url_for('workspace')}}">Workspace</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="blur-window n1"></div>
+    <div class="blur-window n2"></div>
+    <div class="blur-window n3"></div>
+</body>
+</html>
