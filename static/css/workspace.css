@@ -112,13 +112,96 @@
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    overflow: hidden;
+    position: relative;
 }
 
 .section.label .image-container .label-image{
     height: 100%;
-    width: 500px;
+    width: fit-content;
+    max-width: 620px;
     border-radius: 13px;
     border: 1.5px solid #424242;
+    box-shadow: 0 0 120px #ffffff16;
+}
+
+.section.label .image-container .left-info{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    height: calc(100% - 4rem);
+    width: 250px;
+    background-color: #101010db;
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1.7px solid #2D2D2D;
+    border-radius: 20px;
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.image-container .left-info .little-title{
+    font-weight: 500;
+    font-size: 1.45rem;
+    margin-bottom: 1.2rem;
+    color: var(--primary-white);
+}
+
+
+.image-container .left-info .title-label{
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #dbdbdb;
+    margin-bottom: 6px;
+}
+
+.image-container .left-info p{
+    font-size: 1rem;
+    color: #cbcbcb;
+    margin-bottom: 0.9rem;
+}
+
+.image-container .left-info .reportButton{
+    margin-top: auto;
+    padding: 5px 20px;
+    background-color: #212131;
+    border: 1.2px solid #636CFF;
+    color: #BCC0FF;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.image-container .left-info .reportButton:hover{
+    background-color: #323248;
+    transform: translateY(-3px);
+}
+
+.section.label .image-container .bottom-info{
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    width: 200px;
+    height: 70px;
+    background-color: #101010db;
+    border: 1.7px solid #2D2D2D;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+}
+
+.section.label .image-container .bottom-info .gray-short-title{
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+    color: #c2c2c2;
+    font-weight: 500;
+}
+
+.section.label .image-container .bottom-info .little-gray-text{
+    font-size: 1rem;
+    color: #b2b2b2;
 }
 
 .section.label .input-section{

@@ -22,13 +22,15 @@
     <link rel="icon" href="{{ url_for('static', filename='images/veldAI-logo.png')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/workspace.css')}}">
+
+    <script src="{{ url_for('static', filename='js/workspace.js') }}"></script>
 </head>
 <body>
     <header class="header">
         <nav class="navbar">
             <a class="logo-link" href="#"><h1 class="logo">VeldAI</h1><img class="logo-image" src="{{ url_for('static', filename='images/veldAI-logo.png')}}" alt="Logo image"><i class="fa-solid fa-hammer"></i></a>
             <ul class="nav site-links">
-                <li><a class="s-link" href="#">Home</a></li>
+                <li><a class="s-link" href="{{ url_for('labelview1')}}">Home</a></li>
                 <li><a class="s-link" href="#">Tools</a></li>
                 <li><a class="s-link" href="#">Help</a></li>
                 <li><a class="profile-link" href="#"><i class="fa-solid fa-user"></i></a></li>
@@ -38,12 +40,24 @@
     <main class="main">
         <section class="section label">
             <div class="image-container">
+                <div class="left-info">
+                    <h4 class="little-title">Image Data</h4>
+                    <h5 class="title-label">Filename</h5>
+                    <p id="filenameTextSpace" class="little-gray-text"></p>
+                    <h5 class="title-label">File size</h5>
+                    <p id="fileSizeTextSpace" class="little-gray-text"></p>
+                    <a class="reportButton" href="#">Report</a>
+                </div>
                 <img class="label-image" id="labelImage" src="" alt="Image to label">
+                <div class="bottom-info">
+                    <h6 class="gray-short-title">Image shared by:</h6>
+                    <p id="sharedByTextSpace" class="little-gray-text">VeldAI</p>
+                </div>
             </div>
             <div class="input-section">
                 <input class="input-space" id="labelInput" type="text" placeholder="What is in the image?">
-                <button class="submit-button">Submit</button>
-                <button class="skip-button">Skip</button>
+                <button id="submitButton" class="submit-button">Submit</button>
+                <button id="skipButton" class="skip-button">Skip</button>
               </div>
         </section>
     </main>
