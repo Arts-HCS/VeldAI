@@ -1,6 +1,5 @@
 from flask import Flask, render_template, jsonify, request, send_from_directory
 import os, random, csv
-from PIL import Image
 
 image_folder = 'static/photos'
 label_file = 'labels.csv'
